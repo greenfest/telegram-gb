@@ -20,7 +20,6 @@ def guess_handler(message):
     chat_id = message.chat.id
     text = message.text    
     randomNum = random.randint(0,1000)
-    print(randomNum)
     guess = bot.send_message(chat_id, 'Давай поиграем в игру! Я загадываю число от 1 до 1000, а тебе нужно отгадать. Как ты думаешь, какое число я загадал?')
     bot.register_next_step_handler(guess, checkNum, randomNum)
 
